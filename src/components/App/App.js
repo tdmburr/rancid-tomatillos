@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <header>
+        <header className="App-header">
           <h1>Putrid Portabellos</h1>
         </header>
         {/* <MovieContainer /> */}
