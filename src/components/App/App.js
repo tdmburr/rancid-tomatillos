@@ -1,12 +1,13 @@
 import './App.css';
 import React, {Component} from 'react'
+import MovieContainer from '../MovieContainer/MovieContainer'
 import movieData from "../../movieMock.js"
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      movie: movieData
+      allMovies: movieData
     }
   }
 
@@ -16,7 +17,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Putrid Portabellos</h1>
         </header>
-        {/* <MovieContainer /> */}
+        <MovieContainer movies = {this.state.allMovies}/>
       </main>
     )
   }

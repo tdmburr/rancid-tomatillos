@@ -1,10 +1,12 @@
 
 
-const Movie = () => {
+const Movie = (props) => {
+  console.log(props)
   return (
-    <div className="movieCard">
-      <img src="https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg"></img>
-      <h2>Title</h2>
+    <div className="movieCard" id={props.id}>
+      <img src={props.movieInfo.poster_path} alt="Neat Movie"></img>
+      <h2>{props.movieInfo.title}</h2>
+      <span>{props.movieInfo.average_rating}</span>
     </div>
   )
 }
