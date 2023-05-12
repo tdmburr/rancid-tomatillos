@@ -11,6 +11,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #8B795E;
+  font-family: "papyrus";
 }
 
 h1 {
@@ -21,3 +22,4 @@ h1 {
   margin: 8px;
 }
 
+h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
