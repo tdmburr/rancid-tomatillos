@@ -1,12 +1,12 @@
 section {
   display: flex;
   align-items: center;
-  justify-content: start;
-  overflow-x: auto;
-  overflow-y: hidden;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow: scroll;
   gap: 26px;
   margin: 30px;
   padding: 16px;
   flex-wrap: wrap;
-  overflow: scroll;
+  border: solid 3px #EECFA1;
 }

@@ -10,13 +10,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(245, 245, 245, 0.448);
+  background-color: #8B795E;
 }
 
 h1 {
-  color: #023020;
+  color: #EECFA1;
   font-family: 'Cinema St', sans-serif;
   text-align: center;
   font-size: 70px;
   margin: 8px;
 }
+
