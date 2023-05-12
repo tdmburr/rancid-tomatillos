@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <header className="App-header">
+        <header>
           <h1>Putrid Portabellos</h1>
         </header>
         <MovieContainer movies = {this.state.allMovies}/>
