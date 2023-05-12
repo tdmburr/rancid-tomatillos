@@ -1,4 +1,4 @@
-
+import  "./Movie.css"
 
 const Movie = (props) => {
   console.log(props)
