@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react'
 import MovieContainer from '../MovieContainer/MovieContainer'
-import { fetchAllMovies, fetchSingleMovieDetails } from '../../apiCalls';
+import { fetchAllMovies } from '../../apiCalls';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import FooterForm from '../FooterForm/FooterForm';
 
@@ -10,15 +10,16 @@ class App extends Component {
     super()
     this.state = {
       allMovies: [],
-      selectedMovie : null,
+      selectedMovie : 0,
       error : null
     }
   }
 
   clickMovieSelect = (id) => {
-    const selectedMovie = this.state.allMovies.movies.find(movie => movie.id === id)
-    this.setState({selectedMovie})
-    console.log(selectedMovie.id)
+    this.setState({selectedMovie: id})
+    // const selectedMovie = this.state.allMovies.movies.find(movie => movie.id === id)
+    // this.setState({selectedMovie})
+    // console.log(selectedMovie.id)
   }
 
   componentDidMount() {
