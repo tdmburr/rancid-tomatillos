@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react'
 import MovieContainer from '../MovieContainer/MovieContainer'
-import movieData from "../../movieMock.js"
+import { fetchAllMovies, fetchSingleMovieDetails } from '../../apiCalls';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import FooterForm from '../FooterForm/FooterForm';
 
@@ -22,7 +22,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+    fetchAllMovies()
+    .then(data =>{
+      this.setState({allMovies : data.movies})
+    })  
+  }
 
 
 
@@ -33,9 +37,9 @@ class App extends Component {
           <h1>Putrid Portabellos</h1>
         </header>
         {this.state.selectedMovie ? (
-        <MovieInfo selectMovie ={this.state.selectedMovie}/>
+        <MovieInfo clickMovieSelect ={this.clickMovieSelect} selectedMovieId = {this.state.selectedMovie}/>
         ) : (
-        <MovieContainer movies = {this.state.allMovies.movies} clickMovieSelect={this.clickMovieSelect}/>)}
+        <MovieContainer movies = {this.state.allMovies} clickMovieSelect={this.clickMovieSelect}/>)}
         <FooterForm />
       </main>
     )
