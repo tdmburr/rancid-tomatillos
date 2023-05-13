@@ -9,8 +9,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allMovies: movieData,
-      selectedMovie : null
+      allMovies: [],
+      selectedMovie : null,
+      error : null
     }
   }
 
@@ -19,6 +20,9 @@ class App extends Component {
     this.setState({selectedMovie})
     console.log(selectedMovie.id)
   }
+
+  componentDidMount() {
+    
 
 
 
