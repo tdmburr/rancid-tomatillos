@@ -1,0 +1,31 @@
+footer {
+  height: 30px;
+  border-top: 2px solid rgba(0, 0, 0, 0.192);
+  background-color: #8B795E;
+  padding: 25px;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+input {
+  padding-left: 15px;
+}
+
+button {
+  color: white;
+  background-color: #705834;
+  border-radius: 20px;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b2956a;
+}

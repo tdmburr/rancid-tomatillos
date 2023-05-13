@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import MovieContainer from '../MovieContainer/MovieContainer'
 import movieData from "../../movieMock.js"
 import MovieInfo from '../MovieInfo/MovieInfo';
+import FooterForm from '../FooterForm/FooterForm';
 
 class App extends Component {
   constructor() {
@@ -17,8 +18,9 @@ class App extends Component {
     const selectedMovie = this.state.allMovies.movies.find(movie => movie.id === id)
     this.setState({selectedMovie})
     console.log(selectedMovie.id)
-  
   }
+
+
 
   render() {
     return (
@@ -30,6 +32,7 @@ class App extends Component {
         <MovieInfo selectMovie ={this.state.selectedMovie}/>
         ) : (
         <MovieContainer movies = {this.state.allMovies.movies} clickMovieSelect={this.clickMovieSelect}/>)}
+        <FooterForm />
       </main>
     )
   }
