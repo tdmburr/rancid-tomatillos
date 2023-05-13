@@ -1,12 +1,13 @@
+import React from "react"
 import  "./Movie.css"
 
-const Movie = (props) => {
-  console.log(props)
+const Movie = ({movieInfo, clickMovieSelect}) => {
+  // console.log(clickMovieSelect)
   return (
-    <div className="movieCard" id={props.id}>
-      <img src={props.movieInfo.poster_path} alt="Neat Movie"></img>
-      <h2>{props.movieInfo.title}</h2>
-      <span>Average Ratings: {props.movieInfo.average_rating}</span>
+    <div onClick={() => clickMovieSelect(movieInfo.id)} className="movieCard" id={movieInfo.id}>
+      <img src={movieInfo.poster_path} alt="Neat Movie"></img>
+      <h2>{movieInfo.title}</h2>
+      <span>Average Ratings: {movieInfo.average_rating.toFixed(1)}</span>
     </div>
   )
 }

@@ -3,11 +3,11 @@ import testDetails from './mockMovieView'
 import './MovieInfo.css'
 
 class MovieInfo extends Component {
-    constructor() {
+    constructor(props) {
         super()
         this.state = testDetails.movie
     }
-    
+
     render() {
         return(
           <section>
