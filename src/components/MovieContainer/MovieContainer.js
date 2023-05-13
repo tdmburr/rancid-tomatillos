@@ -1,20 +1,15 @@
-import React from "react"
-import Movie from "../Movie/Movie"
-import "./MovieContainer.css"
 
-const MovieContainer = ({movies}) => {
-  const movieData = movies
-  const movie = movieData.movies.map(movie => {
-    return (
-      <Movie key={movie.id} movieInfo={movie}/>
-    )
-  })
+import React from 'react';
+import Movie from '../Movie/Movie';
+import './MovieContainer.css';
 
-  return (
-    <section>
-      {movie}
-    </section>
-  )
-}
+const MovieContainer = ({ movies, clickMovieSelect }) => {
 
-export default MovieContainer
+  const movieList = movies.map((movie) => (
+    <Movie key={movie.id} movieInfo={movie} clickMovieSelect={clickMovieSelect} />
+  ));
+
+  return <section>{movieList}</section>;
+};
+
+export default MovieContainer;
