@@ -14,8 +14,10 @@ class App extends Component {
   }
 
   clickMovieSelect = (id) => {
-    const selectedMovie = this.state.allMovies.movies.filter(movie => movie.id === id)
-    this.setState({allMovies: null, selectedMovie : selectedMovie})
+    const selectedMovie = this.state.allMovies.movies.find(movie => movie.id === id)
+    this.setState({selectedMovie})
+    console.log(selectedMovie.id)
+  
   }
 
   render() {
@@ -24,8 +26,10 @@ class App extends Component {
         <header className="App-header">
           <h1>Putrid Portabellos</h1>
         </header>
-        {this.state.selectedMovie ? <MovieInfo selectMovie ={this.clickMovieSelect}/>:
-        <MovieContainer movies = {this.state.allMovies} selectMovie ={this.clickMovieSelect}/>}
+        {this.state.selectedMovie ? (
+        <MovieInfo selectMovie ={this.state.selectedMovie}/>
+        ) : (
+        <MovieContainer movies = {this.state.allMovies.movies} clickMovieSelect={this.clickMovieSelect}/>)}
       </main>
     )
   }

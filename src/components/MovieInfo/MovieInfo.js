@@ -1,26 +1,32 @@
-import {Component} from 'react'
-import testDetails from './mockMovieView'
-import './MovieInfo.css'
+
+import React, { Component } from 'react';
+import testDetails from '../MovieInfo/mockMovieView';
+import './MovieInfo.css';
 
 class MovieInfo extends Component {
-    constructor(props) {
-        super()
-        this.state = testDetails.movie
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      movie: testDetails.movie
+    };
+  }
 
-    render() {
-        return(
-          <section>
-            <img src={this.state['poster_path']}/>
-            <div className="moreInfo">
-              <p>{this.state.overview}</p>
-              <p>{this.state['average_rating']}</p>
-              <p>{this.state.genres[0]}</p>
-              <p>{this.state.tagline}</p>
-              <p>{this.state.overview}</p>
-            </div>
-          </section>
-        )
-      }
-    }
-export default MovieInfo
+  render() {
+    const { movie } = this.state;
+
+    return (
+      <section>
+        <img src={movie.poster_path} alt="Movie Poster" />
+        <div className="moreInfo">
+          <p>{movie.overview}</p>
+          <p>{movie.average_rating}</p>
+          <p>{movie.genres[0]}</p>
+          <p>{movie.tagline}</p>
+          <p>{movie.overview}</p>
+        </div>
+      </section>
+    );
+  }
+}
+
+export default MovieInfo;
