@@ -11,22 +11,20 @@ class App extends Component {
     this.state = {
       allMovies: [],
       selectedMovie : 0,
-      error : null
+      error : ''
     }
   }
 
   clickMovieSelect = (id) => {
-    this.setState({selectedMovie: id})
-    // const selectedMovie = this.state.allMovies.movies.find(movie => movie.id === id)
-    // this.setState({selectedMovie})
-    // console.log(selectedMovie.id)
+    this.setState({selectedMovie: id}) 
   }
 
   componentDidMount() {
     fetchAllMovies()
     .then(data =>{
       this.setState({allMovies : data.movies})
-    })  
+    })
+    .catch(err => this.setState({error: err.message}))  
   }
 
 

@@ -9,9 +9,9 @@ const Movie = ({ movieInfo, clickMovieSelect }) => {
       className="movieCard"
       id={movieInfo.id}
     >
-      <img src={movieInfo.poster_path} alt="Neat Movie" />
-      <h2>{movieInfo.title}</h2>
-      <span>Average Ratings: {movieInfo.average_rating.toFixed(1)}</span>
+      <img id={movieInfo.id} src={movieInfo.poster_path} alt="Neat Movie" />
+      <h2 id={movieInfo.id} >{movieInfo.title}</h2>
+      <span id={movieInfo.id} >Average Ratings: {movieInfo.average_rating.toFixed(1)}</span>
     </div>
   );
 };
