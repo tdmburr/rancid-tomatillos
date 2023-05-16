@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { fetchSingleMovieDetails } from '../../apiCalls';
+import acquireInfo from '../../apiCalls';
 import './MovieInfo.css';
 
 class MovieInfo extends Component {
@@ -10,7 +10,7 @@ class MovieInfo extends Component {
   }
 
   componentDidMount() {
-    fetchSingleMovieDetails(this.props.selectedMovieId)
+    acquireInfo(this.props.selectedMovieId)
         .then(data => this.setState(data.movie))
         .catch()
   }
