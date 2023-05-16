@@ -17,7 +17,9 @@ class App extends Component {
   }
 
   clickMovieSelect = (id) => {
-    this.setState({selectedMovie: id}) 
+    let movies = this.state.allMovies
+    movies = movies.filter(movie => movie.title.includes(id.title))
+    this.setState({selectedMovie: movies})
   }
 
   componentDidMount() {
@@ -41,9 +43,9 @@ class App extends Component {
         }}>  
         </Route>
         <Route exact path="/">
-          <MovieContainer movies = {this.state.allMovies} clickMovieSelect={this.clickMovieSelect}/>
-          <FooterForm />
+          <MovieContainer movies = {this.state.selectedMovie} clickMovieSelect={this.clickMovieSelect}/>
         </Route>
+        <FooterForm />
       </main>
     )
   }

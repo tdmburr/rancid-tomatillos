@@ -10,7 +10,7 @@ class MovieInfo extends Component {
   }
 
   componentDidMount() {
-    acquireInfo(this.props.selectedMovieId)
+    acquireInfo(`movies/${this.props.selectedMovieId}`)
         .then(data => this.setState(data.movie))
         .catch()
   }
