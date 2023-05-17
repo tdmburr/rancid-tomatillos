@@ -9,7 +9,7 @@ const MovieContainer = ({ movies, clickMovieSelect }) => {
     <Movie key={movie.id} movieInfo={movie} clickMovieSelect={clickMovieSelect} />
   ));
 
-  return <section>{movieList}</section>;
+  return <section className="section">{movieList}</section>;
 };
 
 export default MovieContainer;
