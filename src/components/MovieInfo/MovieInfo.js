@@ -6,13 +6,18 @@ import './MovieInfo.css';
 class MovieInfo extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      movie: {},
+      error: ''
+    };
   }
 
   componentDidMount() {
-    acquireInfo(`movies/${this.props.selectedMovieId}`)
-        .then(data => this.setState(data.movie))
-        .catch()
+    Promise.all([acquireInfo(`movies/${this.props.selectedMovieId}`)])
+        .then(data => {
+          this.setState({movie: data[0].movie})
+        })
+        .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
   }
 
   render() {
@@ -20,20 +25,22 @@ class MovieInfo extends Component {
       style: 'currency',
       currency: 'USD'
     });
+    let movie = this.state.movie
+
     return (
       <section>
-        <img src={this.state.poster_path} alt="Movie Poster" />
+        <img className="smallImg" src={movie.backdrop_path} alt={movie.title} />
         <div className="moreInfo">
-        <p>Title: {this.state.title}</p>
+        <p>Title: {movie.title}</p>
         {/* <p>{this.state.backdrop_path}</p> */}
-        <p>Release Date: {this.state.release_date}</p>
-        <p>Overview: {this.state.overview}</p>
-        <p>Genre: {this.state.genres}</p>
-        <p>Budget: {dollarConversion.format(this.state.budget)}</p>
-        <p>Revenue: {dollarConversion.format(this.state.revenue)}</p>
-        <p>Duration: {this.state.runtime}</p>
-        <p>Tagline: {this.state.tagline}</p>
-        <p>Rating: {this.state.average_rating}</p>
+        <p>Release Date: {movie.release_date}</p>
+        <p>Overview: {movie.overview}</p>
+        <p>Genre: {movie.genres}</p>
+        <p>Budget: {dollarConversion.format(movie.budget)}</p>
+        <p>Revenue: {dollarConversion.format(movie.revenue)}</p>
+        <p>Duration: {movie.runtime}</p>
+        <p>Tagline: {movie.tagline}</p>
+        <p>Rating: {movie.average_rating}</p>
         </div>
       </section>
     );
