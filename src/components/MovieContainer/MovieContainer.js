@@ -2,6 +2,7 @@
 import React from 'react';
 import Movie from '../Movie/Movie';
 import './MovieContainer.css';
+import PropTypes from 'prop-types'
 
 const MovieContainer = ({ movies, clickMovieSelect }) => {
 
@@ -13,3 +14,8 @@ const MovieContainer = ({ movies, clickMovieSelect }) => {
 };
 
 export default MovieContainer;
+
+MovieContainer.propTypes = {
+  movies: PropTypes.array.isRequired,
+  clickMovieSelect: PropTypes.func.isRequired
+}

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import acquireInfo from '../../apiCalls';
 import './MovieInfo.css';
+import PropTypes from 'prop-types'
 
 class MovieInfo extends Component {
   constructor() {
@@ -32,7 +33,6 @@ class MovieInfo extends Component {
         <img className="smallImg" src={movie.backdrop_path} alt={movie.title} />
         <div className="moreInfo">
         <p>Title: {movie.title}</p>
-        {/* <p>{this.state.backdrop_path}</p> */}
         <p>Release Date: {movie.release_date}</p>
         <p>Overview: {movie.overview}</p>
         <p>Genre: {movie.genres}</p>
@@ -48,3 +48,7 @@ class MovieInfo extends Component {
 }
 
 export default MovieInfo;
+
+MovieInfo.propTypes = {
+  selectedMovieId: PropTypes.string.isRequired
+}
