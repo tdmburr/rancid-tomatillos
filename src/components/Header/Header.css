@@ -1,0 +1,23 @@
+.header {
+    background-color: #8B795E;
+    padding: 16px;
+  }
+  
+  .header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header button {
+    color: white;
+    background-color: #705834;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .header button:hover {
+    background-color: #b2956a;
+  }

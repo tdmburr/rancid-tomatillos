@@ -13,7 +13,6 @@ class FooterForm extends Component {
           <input type='text'
                  placeholder='Movie Search'>
           </input>
-          <button>Go Home</button>
         </form>
       </footer>
     )
