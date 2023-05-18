@@ -30,7 +30,7 @@ class MovieInfo extends Component {
 
     return (
       <section>
-        <img className="smallImg" src={movie.backdrop_path} alt={movie.title} />
+        <img className="displayedMoviePoster" src={movie.backdrop_path} alt={movie.title} />
         <div className="moreInfo">
         <p>Title: {movie.title}</p>
         <p>Release Date: {movie.release_date}</p>

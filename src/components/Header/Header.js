@@ -1,8 +1,10 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
-const Header = ({ allMovies, setSelectedMovie, isMovieSelected }) => {
+const Header = ({ allMovies, setSelectedMovie }) => {
   const history = useHistory();
+  const location = useLocation()  
 
   const handleGoHome = () => {
     setSelectedMovie(allMovies);
@@ -11,8 +13,8 @@ const Header = ({ allMovies, setSelectedMovie, isMovieSelected }) => {
 
   return (
     <header>
-      {<h1>Putrid Portabellos</h1>}
-      {isMovieSelected && <button onClick={handleGoHome}>Go Home</button>}
+      {location.pathname !== "/" && <Link to="/"> <button onClick={handleGoHome}>Go Home</button> </Link>}
+      <h1>Putrid Portabellos</h1>
     </header>
   );
 };
