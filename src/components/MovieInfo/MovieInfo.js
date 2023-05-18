@@ -38,7 +38,7 @@ class MovieInfo extends Component {
         <p>Genre: {movie.genres}</p>
         <p>Budget: {dollarConversion.format(movie.budget)}</p>
         <p>Revenue: {dollarConversion.format(movie.revenue)}</p>
-        <p>Duration: {movie.runtime}</p>
+        <p>Duration: {movie.runtime} minutes.</p>
         <p>Tagline: {movie.tagline}</p>
         <p>Rating: {movie.average_rating}</p>
         </div>
