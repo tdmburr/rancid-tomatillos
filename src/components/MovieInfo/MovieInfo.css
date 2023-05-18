@@ -1,3 +1,4 @@
-.smallImg {
-  max-width: 80%;
+.displayed-movie-poster {
+    height: 1300px;
+    padding: 30px;
 }

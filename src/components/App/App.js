@@ -1,26 +1,26 @@
-import './App.css';
-import React, {Component} from 'react'
-import MovieContainer from '../MovieContainer/MovieContainer'
-import acquireInfo from '../../apiCalls';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import MovieContainer from '../MovieContainer/MovieContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import FooterForm from '../FooterForm/FooterForm';
-import { Route } from 'react-router-dom'
+import Header from '../Header/Header';
+import acquireInfo from '../../apiCalls';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       allMovies: [],
       selectedMovie: [],
-      error: ''
-    }
+      error: '',
+    };
   }
 
   clickMovieSelect = (id) => {
-    let movies = this.state.allMovies
-    movies = movies.filter(movie => movie.title.includes(id.title))
-    this.setState({selectedMovie: movies})
-  }
+    let movies = this.state.allMovies;
+    movies = movies.filter((movie) => movie.title.includes(id.title));
+    this.setState({ selectedMovie: movies });
+  };
 
   componentDidMount() {
     acquireInfo('movies')
@@ -29,27 +29,27 @@ class App extends Component {
     })
     .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
   }
-
-
+  
+  setSelectedMovie = (movies) => {
+    this.setState({ selectedMovie: movies });
+  };
 
   render() {
     return (
-      <main className="App">
-        <header className="App-header">
-          <h1>Putrid Portabellos</h1>
-        </header>
-        <Route path="/movies/:movieId" render={({ match }) => {
-          return <MovieInfo clickMovieSelect ={this.clickMovieSelect} selectedMovieId = {match.params.movieId}/>
-        }}>  
-        </Route>
-        <Route exact path="/">
-          <MovieContainer movies = {this.state.selectedMovie} clickMovieSelect={this.clickMovieSelect}/>
-        </Route>
-        <FooterForm />
-      </main>
-    )
+      <Router>
+        <div className="App">
+          <Header allMovies={this.state.allMovies} setSelectedMovie={this.setSelectedMovie} />
+          <Route path="/movies/:movieId" render={({ match }) => {
+            return <MovieInfo clickMovieSelect={this.clickMovieSelect} selectedMovieId={match.params.movieId} />;
+          }} />
+          <Route exact path="/" render={() => {
+            return <MovieContainer movies={this.state.selectedMovie} clickMovieSelect={this.clickMovieSelect} />;
+          }} />
+          <FooterForm />
+        </div>
+      </Router>
+    );
   }
 }
-
 
 export default App;
