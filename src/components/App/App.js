@@ -24,10 +24,10 @@ class App extends Component {
 
   componentDidMount() {
     acquireInfo('movies')
-      .then((data) => {
-        this.setState({ allMovies: data.movies, selectedMovie: data.movies });
-      })
-      .catch((err) => this.setState({ error: 'Data retrieval network error.' }));
+    .then(data =>{
+      this.setState({allMovies: data.movies, selectedMovie: data.movies})
+    })
+    .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
   }
   
   setSelectedMovie = (movies) => {

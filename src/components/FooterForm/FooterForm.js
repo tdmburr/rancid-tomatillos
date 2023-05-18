@@ -1,11 +1,13 @@
 import './FooterForm.css'
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+
 
 class FooterForm extends Component {
   constructor() {
     super();
     this.state = {title: ''}
   }
+
   render() {
     return (
       <footer>
