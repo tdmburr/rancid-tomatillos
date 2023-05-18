@@ -21,3 +21,8 @@
   .header button:hover {
     background-color: #b2956a;
   }
+
+  .smallImage{
+    height:900px;
+    width:900px;
+  }

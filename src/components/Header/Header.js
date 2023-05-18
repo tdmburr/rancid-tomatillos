@@ -1,7 +1,7 @@
-import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Header = ({ allMovies, setSelectedMovie }) => {
+
+const Header = ({ allMovies, setSelectedMovie, isMovieSelected }) => {
   const history = useHistory();
 
   const handleGoHome = () => {
@@ -11,10 +11,15 @@ const Header = ({ allMovies, setSelectedMovie }) => {
 
   return (
     <header>
-      {/* ... */}
-      <button onClick={handleGoHome}>Go Home</button>
+      {<h1>Putrid Portabellos</h1>}
+      {isMovieSelected && <button onClick={handleGoHome}>Go Home</button>}
     </header>
   );
 };
 
 export default Header;
+
+
+
+
+
