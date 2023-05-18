@@ -13,6 +13,7 @@ class App extends Component {
       allMovies: [],
       selectedMovie: [],
       error: '',
+      isMovieSlected: false
     };
   }
 
