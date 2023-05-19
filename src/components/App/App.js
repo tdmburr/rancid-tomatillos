@@ -25,6 +25,13 @@ class App extends Component {
     .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
   }
 
+  filterMovies = (display) => {
+    let title = this.state.allMovies;
+    title = title.filter(movie => movie.title.includes(display.title));
+    this.setState({selectedMovie: title});
+  }
+
+
   render() {
     return (
         <main className="App">
@@ -32,10 +39,10 @@ class App extends Component {
           <Route path="/movies/:movieId" render={({ match }) => {
             return <MovieInfo selectedMovieId={match.params.movieId} />
           }} />
-          <Route exact path="/" render={() => {
-            return <MovieContainer movies={this.state.selectedMovie}  />
-          }} />
-          <Route exact path="/" render={() => <FooterForm />}/>
+          <Route exact path="/">
+            <MovieContainer movies={this.state.selectedMovie} />
+            <FooterForm filterMovies={this.filterMovies}/>
+          </Route>
         </main>
     )
   }

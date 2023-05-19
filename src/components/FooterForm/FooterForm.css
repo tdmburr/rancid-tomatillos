@@ -1,4 +1,7 @@
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 30px;
   border-top: 2px solid rgba(0, 0, 0, 0.192);
   background-color: #8B795E;
@@ -13,7 +16,9 @@ form {
 }
 
 input {
-  padding-left: 15px;
+  display: flex;
+  text-align: center;
+  width: 250px;
 }
 
 button {
@@ -25,7 +30,6 @@ button {
   padding-right: 16px;
   cursor: pointer;
   margin-top: 5px;
-  margin-left: 26px;
 }
 
 button:hover {
