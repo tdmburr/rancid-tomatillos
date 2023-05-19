@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
   border: 2px solid #EECFA1;
+  box-shadow: 10px 5px 5px brown;
+}
+
+.movieCard:hover {
+  border: 8px solid #EECFA1;
+  background-color: #a1896484;
+  opacity: 100%;
 }
 
 span {

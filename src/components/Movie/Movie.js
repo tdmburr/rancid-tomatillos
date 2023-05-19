@@ -16,9 +16,9 @@ const Movie = ({ movieInfo }) => {
         className="movieCard"
         id={movieInfo.id}
       >
-       <img id={movieInfo.id} src={movieInfo.poster_path} alt={movieInfo.title} />
-      <h2 id={movieInfo.id} className="movieTitle">{movieInfo.title}</h2>
-      <span id={movieInfo.id}>Rating: {getMushroomRating(movieInfo.average_rating)}({movieInfo.average_rating})</span>
+        <img id={movieInfo.id} src={movieInfo.poster_path} alt={movieInfo.title} />
+        <h2 id={movieInfo.id} className="movieTitle">{movieInfo.title}</h2>
+        <span id={movieInfo.id}>Rating: {getMushroomRating(movieInfo.average_rating)}({movieInfo.average_rating})</span>
       </div>
     </Link>
   );
