@@ -22,7 +22,7 @@ describe('User movie dashboard with user flows and error handling', () => {
 
   it('As a user, I should see multiple movies on the "home" page.', () => {
 
-    cy.get('section')
+    cy.get('.movieContainer')
       .should('exist')
     .get('#436270')
       .should('exist').should('be.visible')

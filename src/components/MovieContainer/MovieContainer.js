@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Movie from '../Movie/Movie'
 import './MovieContainer.css'
@@ -10,7 +9,7 @@ const MovieContainer = ({ movies }) => {
     <Movie key={movie.id} movieInfo={movie} />
   ));
 
-  return <section className="section">{movieList}</section>;
+  return <section className="movieContainer">{movieList}</section>;
 };
 
 export default MovieContainer;
