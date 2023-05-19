@@ -1,16 +1,21 @@
 .singleMovieCard {
   display: flex;
   flex-direction: row;
+  align-items: center;
   max-width: 100%;
+  height: 75%;
+  border: 2px solid #EECFA1;
+  margin: 0
 }
 
 .displayedMoviePoster {
-  height: 500px;
+  height: -webkit-fill-available;
   width: 50%;
-  /* padding: 30px; */
 }
 
 .moreInfo {
   display: flex;
   flex-direction: column;
+  color:#EECFA1;
+  font-size: 25px;
 }

@@ -9,6 +9,7 @@
   padding: 16px;
   flex-wrap: wrap;
   border: solid 3px #EECFA1;
+  height: 65%;
 }
 
 .movieCard {
@@ -48,4 +49,24 @@
   font-size: 14px;
   margin-bottom: -2px;
   color:#023020
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #EECFA1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a1896484;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

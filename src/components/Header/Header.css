@@ -9,28 +9,26 @@ header {
 
 h1 {
   color: #EECFA1;
-  font-family: 'Cinema St', sans-serif;
+  font-family: 'Papyrus', 'fantasy';
   text-align: center;
   font-size: 70px;
   margin: 8px;
 }
-
-h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
   
-  .header button {
+.header button {
     color: white;
     background-color: #705834;
     border-radius: 20px;
     font-size: 16px;
     padding: 8px 16px;
     cursor: pointer;
-  }
+}
   
-  .header button:hover {
+.header button:hover {
     background-color: #b2956a;
-  }
+}
 
-  .smallImage{
+.smallImage{
     height:900px;
     width:900px;
-  }
+}
