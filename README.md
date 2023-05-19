@@ -27,7 +27,7 @@ Installation steps:
 
 Trey Marshell
 
-[https://github.com/sdtrachsel](https://github.com/tdmburr)
+[https://github.com/tdmburr](https://github.com/tdmburr)
 
 Josua Martin
 
