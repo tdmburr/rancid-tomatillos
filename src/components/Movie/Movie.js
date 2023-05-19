@@ -3,7 +3,7 @@ import React from 'react';
 import './Movie.css';
 import PropTypes from 'prop-types'
 
-const Movie = ({ movieInfo, clickMovieSelect }) => {
+const Movie = ({ movieInfo }) => {
   const getMushroomRating = (rating) => {
     const mushrooms = '🍄';
     const mushroomRating = mushrooms.repeat(rating);
@@ -13,7 +13,6 @@ const Movie = ({ movieInfo, clickMovieSelect }) => {
   return (
     <Link to={'movies/' + movieInfo.id}>
       <div
-        onClick={() => clickMovieSelect(movieInfo.id)}
         className="movieCard"
         id={movieInfo.id}
       >

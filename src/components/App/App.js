@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import FooterForm from '../FooterForm/FooterForm';
@@ -13,15 +13,8 @@ class App extends Component {
       allMovies: [],
       selectedMovie: [],
       error: '',
-      isMovieSlected: false
     };
   }
-
-  clickMovieSelect = (id) => {
-    let movies = this.state.allMovies;
-    movies = movies.filter((movie) => movie.title.includes(id.title));
-    this.setState({ selectedMovie: movies });
-  };
 
   componentDidMount() {
     acquireInfo('movies')
@@ -37,18 +30,16 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
+        <main className="App">
           <Header allMovies={this.state.allMovies} setSelectedMovie={this.setSelectedMovie} />
           <Route path="/movies/:movieId" render={({ match }) => {
-            return <MovieInfo clickMovieSelect={this.clickMovieSelect} selectedMovieId={match.params.movieId} />;
+            return <MovieInfo selectedMovieId={match.params.movieId} />;
           }} />
           <Route exact path="/" render={() => {
-            return <MovieContainer movies={this.state.selectedMovie} clickMovieSelect={this.clickMovieSelect} />;
+            return <MovieContainer movies={this.state.selectedMovie} />;
           }} />
           <FooterForm />
-        </div>
-      </Router>
+        </main>
     );
   }
 }
