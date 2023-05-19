@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MovieContainer from '../MovieContainer/MovieContainer';
-import MovieInfo from '../MovieInfo/MovieInfo';
-import FooterForm from '../FooterForm/FooterForm';
-import Header from '../Header/Header';
-import acquireInfo from '../../apiCalls';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import MovieContainer from '../MovieContainer/MovieContainer'
+import MovieInfo from '../MovieInfo/MovieInfo'
+import FooterForm from '../FooterForm/FooterForm'
+import Header from '../Header/Header'
+import acquireInfo from '../../apiCalls'
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -23,25 +24,21 @@ class App extends Component {
     })
     .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
   }
-  
-  setSelectedMovie = (movies) => {
-    this.setState({ selectedMovie: movies });
-  };
 
   render() {
     return (
         <main className="App">
-          <Header allMovies={this.state.allMovies} setSelectedMovie={this.setSelectedMovie} />
+          <Header />
           <Route path="/movies/:movieId" render={({ match }) => {
-            return <MovieInfo selectedMovieId={match.params.movieId} />;
+            return <MovieInfo selectedMovieId={match.params.movieId} />
           }} />
           <Route exact path="/" render={() => {
-            return <MovieContainer movies={this.state.selectedMovie} />;
+            return <MovieContainer movies={this.state.selectedMovie}  />
           }} />
-          <FooterForm />
+          <Route exact path="/" render={() => <FooterForm />}/>
         </main>
-    );
+    )
   }
 }
 
-export default App;
+export default App

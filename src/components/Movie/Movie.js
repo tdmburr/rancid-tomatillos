@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
-import React from 'react';
-import './Movie.css';
+import React from 'react'
+import './Movie.css'
 import PropTypes from 'prop-types'
 
 const Movie = ({ movieInfo }) => {
   const getMushroomRating = (rating) => {
-    const mushrooms = '🍄';
-    const mushroomRating = mushrooms.repeat(rating);
-    return mushroomRating;
+    const mushrooms = '🍄'
+    const mushroomRating = mushrooms.repeat(rating)
+    return mushroomRating
   };
 
   return (
@@ -24,7 +24,7 @@ const Movie = ({ movieInfo }) => {
   );
 };
 
-export default Movie;
+export default Movie
 
 Movie.propTypes = {
   movieInfo: PropTypes.shape({

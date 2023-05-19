@@ -29,21 +29,21 @@ class MovieInfo extends Component {
     let movie = this.state.movie
 
     return (
-      <section>
+      <section className="singleMovieCard">
         <img className="displayedMoviePoster" src={movie.backdrop_path} alt={movie.title} />
         <div className="moreInfo">
-        <p>Title: {movie.title}</p>
-        <p>Release Date: {movie.release_date}</p>
-        <p>Overview: {movie.overview}</p>
-        <p>Genre: {movie.genres}</p>
-        <p>Budget: {dollarConversion.format(movie.budget)}</p>
-        <p>Revenue: {dollarConversion.format(movie.revenue)}</p>
-        <p>Duration: {movie.runtime} minutes.</p>
-        <p>Tagline: {movie.tagline}</p>
-        <p>Rating: {movie.average_rating}</p>
+          <p>Title: {movie.title}</p>
+          <p>Release Date: {movie.release_date}</p>
+          <p>Overview: {movie.overview}</p>
+          <p>Genre: {movie.genres}</p>
+          <p>Budget: {dollarConversion.format(movie.budget)}</p>
+          <p>Revenue: {dollarConversion.format(movie.revenue)}</p>
+          <p>Duration: {movie.runtime} minutes.</p>
+          <p>Tagline: {movie.tagline}</p>
+          <p>Rating: {movie.average_rating}</p>
         </div>
       </section>
-    );
+    )
   }
 }
 
