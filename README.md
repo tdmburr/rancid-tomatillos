@@ -1,8 +1,27 @@
 # README_Putrid_Portabellos
 
 ## Description
-
 Description: This application, called "Putrid Portabellos," is a movie information website that allows users to explore and discover various movies. Users can view a collection of movies, filter them by genre, and click on individual movies to see detailed information about them. The app aims to provide an engaging and user-friendly experience for movie enthusiasts.
+
+## Learning Goals:
+Understand React and gain a solid understanding of the React library and its core concepts, such as components, state, props, and lifecycle methods. We alsohad to learn how to build reusable UI components and compose them.
+
+Practice React Router: Learn how to use React Router to handle routing within a React application. Understand how to define routes, handle our App navigation, and pass parameters to different components based on URL route.
+
+Fetch API Data: Learn how to make asynchronous API calls using  Fetch API. Understand how to handle the response data,loading states, error handling, and data manipulation (parse), and update the application state a 
+
+Implement Conditional Rendering: Explore techniques for conditionally rendering components based on different states or user interactions. Learn how to show/hide components, render different content based on conditions which helps in response to user input effectively.
+
+Manage Application State: Understand different ways to managing application state. Gain experience in maintaining and updating the application state effectively as we produced this App.
+
+Learning how to build and deploy the React application to a hosting platform or server. Understand the process of publishing the application online and making it accessible to users.
+
+## Wins + Challenges:
+
+wins.) We stayed very organized and focused thanks to the norms and the Github Project board that we had set up at on day one. We both had different strengths that we brought to the table and it made the group dynamic more productive in our asychronus. This project involved both frontend and backend aspects. We encountered various challenges and problems to solve. Successfully overcoming these challenges boosted our problem-solving skills togethor and maintained our momentum in the project with ability to solve technical issues aynchronously . Working as a group on this project gave us the chance to enhance our collaboration and communication skills. Working together, sharing ideas, and coordinating efforts  helped us understand the dynamics of teamwork and how smooth a project can be with these aspects in place.
+
+challenges.) React can has a steep learning curve, especially for us as beginners. The challenge lies in understanding the fundamental concepts and best practices of React and applying them in the project.Integrating with external APIs to fetch data was challenging, especially when dealing with authentication, error handling, and handling large datasets. As the application grew in complexity, managing the state and ensuring it is consistentcy across different components can became a challenge once we incorporated React Route. Throughout the development process, we encountered some bugs, errors, and unexpected behavior. Debugging and troubleshooting these issues was time-consuming and required patience and persistence, but in the end we were suffice with our outcomes.
+
 
 
 
@@ -37,9 +56,9 @@ Installation steps:
 
 4. Then type 'npm start' into the same terminal. Now the user can open a new window in their terminal using 'cmd - t'.  
 
-5. The user can now type open '**[http://localhost:8080/](http://localhost:8080/)**' into the new window in terminal to open up the application.
+5. The user can now type open '**[http://localhost:8080/](http://localhost:3000/)**' into the new window in terminal to open up the application.
 
-## Contributor  /  Links
+## Contributors  //  Links
 
 🍄 -Trey Marshell
 
@@ -49,5 +68,5 @@ Installation steps:
 
 [https://github.com/jmartin777](https://github.com/jmartin777)
 
-## Putrid Portabellos
+
 
