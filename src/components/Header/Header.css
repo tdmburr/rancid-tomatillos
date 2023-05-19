@@ -1,6 +1,6 @@
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #8B795E;
@@ -15,7 +15,7 @@ h1 {
   margin: 8px;
 }
 
-h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
+h1 { font-family: "Brush Script MT", cursive; font-size: 74px; font-style: normal; }
   
   .header button {
     color: white;
@@ -33,4 +33,9 @@ h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
   .smallImage{
     height:900px;
     width:900px;
+  }
+
+  #header-logo {
+    width: 90px;
+    height: 90px;
   }
