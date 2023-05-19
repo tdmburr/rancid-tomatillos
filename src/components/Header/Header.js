@@ -14,8 +14,11 @@ const Header = () => {
 
   return (
     <header>
-      <img src= {putridPortabelloImage} id='header-logo' alt="Putrid Portabello" />
-      <h1>Putrid Portabellos</h1> <img src= {putridPortabelloImage} id='header-logo' alt="Putrid Portabello" />
+      <h1>
+        <img src= {putridPortabelloImage} id='header-logo' alt="Putrid Portabello" />
+        Putrid Portabellos
+        <img src= {putridPortabelloImage} id='header-logo' alt="Putrid Portabello" />  
+      </h1>        
       {location.pathname !== "/" && <Link to="/"> <button onClick={handleGoHome}>Go Home</button> </Link>}
     </header>
   )
