@@ -1,7 +1,7 @@
 import multipleStub from "../fixtures/multipleStub"
 import singleStub from "../fixtures/singleStub"
 
-describe('User movie dashboard with user flows and error handling', () => {
+describe('User movie dashboard with user flows', () => {
   let testVisit = () => cy.visit('http://localhost:3000')
   
   beforeEach(()=> {
