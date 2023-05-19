@@ -1,13 +1,21 @@
-.header {
-    background-color: #8B795E;
-    padding: 16px;
-  }
-  
-  .header h1 {
-    color: white;
-    font-size: 24px;
-    margin: 0;
-  }
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B795E;
+  font-family: "papyrus";
+}
+
+h1 {
+  color: #EECFA1;
+  font-family: 'Cinema St', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  margin: 8px;
+}
+
+h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
   
   .header button {
     color: white;

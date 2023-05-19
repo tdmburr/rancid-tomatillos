@@ -6,20 +6,3 @@
   
 }
  
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #8B795E;
-  font-family: "papyrus";
-}
-
-h1 {
-  color: #EECFA1;
-  font-family: 'Cinema St', sans-serif;
-  text-align: center;
-  font-size: 70px;
-  margin: 8px;
-}
-
-h1 { font-family: Papyrus, fantasy; font-size: 44px; font-style: normal; }
