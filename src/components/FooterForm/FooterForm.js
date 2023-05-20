@@ -48,5 +48,5 @@ class FooterForm extends Component {
 export default FooterForm
 
 FooterForm.propTypes = {
-  clearMovie: PropTypes.func.isRequired
+  filterMovies: PropTypes.func.isRequired
 }
