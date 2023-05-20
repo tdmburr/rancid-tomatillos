@@ -18,7 +18,7 @@ Learning how to build and deploy the React application to a hosting platform or 
 
 ## Wins + Challenges:
 
-wins.) We stayed very organized and focused thanks to the norms and the Github Project board that we had set up at on day one. We both had different strengths that we brought to the table and it made the group dynamic more productive in our asychronus. This project involved both frontend and backend aspects. We encountered various challenges and problems to solve. Successfully overcoming these challenges boosted our problem-solving skills togethor and maintained our momentum in the project with ability to solve technical issues aynchronously . Working as a group on this project gave us the chance to enhance our collaboration and communication skills. Working together, sharing ideas, and coordinating efforts  helped us understand the dynamics of teamwork and how smooth a project can be with these aspects in place.
+wins.) We stayed very organized and focused thanks to the norms and the Github Project board that we had set up at on day one. We both had different strengths that we brought to the table and it made the group dynamic more productive in our asychronus work sessions. This project involved both frontend and backend aspects. We encountered various challenges and problems to solve which resulted in success after research and testing. Successfully overcoming these challenges boosted our problem-solving skills togethor and maintained our momentum in the project with the ability to solve technical issues aynchronously and collaboratively . Working as a group on this project gave us the chance to enhance our collaboration and communication skills, working together, sharing ideas, and coordinating efforts  helped us understand the dynamics of teamwork and how smooth a project can be with these aspects in place.
 
 challenges.) React can has a steep learning curve, especially for us as beginners. The challenge lies in understanding the fundamental concepts and best practices of React and applying them in the project.Integrating with external APIs to fetch data was challenging, especially when dealing with authentication, error handling, and handling large datasets. As the application grew in complexity, managing the state and ensuring it is consistentcy across different components can became a challenge once we incorporated React Route. Throughout the development process, we encountered some bugs, errors, and unexpected behavior. Debugging and troubleshooting these issues was time-consuming and required patience and persistence, but in the end we were suffice with our outcomes.
 
@@ -27,6 +27,11 @@ challenges.) React can has a steep learning curve, especially for us as beginner
 
 ## Abstract
 
+This project is a web application built using React framework. The application is designed to provide users with a platform to browse and explore a collection of movies. It allows users to view detailed information about each movie, such as the title, release date, overview, genre, budget, revenue, duration, tagline, and rating.When User enters a title keyword in the text input the movie titles will be filtered based on that title keyword.
+
+2.The movie titles should be updated in real-time as I type or modify the input.
+
+3.The filtering should be case-insensitive, meaning it should match movie titles regardless of their letter casing.
 
 ## Technologies 
 1. React: The application is built using React, a popular JavaScript library for building user interfaces. React provides a component-based structure that allows for efficient development and maintenance of complex applications.
@@ -56,7 +61,7 @@ Installation steps:
 
 4. Then type 'npm start' into the same terminal. Now the user can open a new window in their terminal using 'cmd - t'.  
 
-5. The user can now type open '**[http://localhost:8080/](http://localhost:3000/)**' into the new window in terminal to open up the application.
+5. The user can now type open '**[http://localhost:3000/](http://localhost:3000/)**' into the new window in terminal to open up the application.
 
 ## Contributors  //  Links
 
@@ -64,7 +69,7 @@ Installation steps:
 
 [https://github.com/tdmburr](https://github.com/tdmburr)
 
-🍄 -Josua Martin
+🍄 -Joshua Martin
 
 [https://github.com/jmartin777](https://github.com/jmartin777)
 
