@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import MovieContainer from '../MovieContainer/MovieContainer'
 import MovieInfo from '../MovieInfo/MovieInfo'
 import FooterForm from '../FooterForm/FooterForm'
@@ -35,19 +35,25 @@ class App extends Component {
 
   render() {
     return (
-        <main className="App">
-          <Header />
-          <Route path="/movies/:movieId" render={({ match }) => {
-            return <MovieInfo selectedMovieId={match.params.movieId} />
-          }} />
-          <Route exact path="/Error">
-            <Error error= "That's not a very fungi!"/>
-          </Route>
-          <Route exact path="/">
-            <MovieContainer movies={this.state.selectedMovie} />
-            <FooterForm filterMovies={this.filterMovies}/>
-          </Route>
-        </main>
+      <main className="App">
+      <Header />
+        <Switch>
+        <Route path="/movies/:movieId" render={({ match }) => {
+          return <MovieInfo selectedMovieId={match.params.movieId} />
+        }} />
+        <Route exact path ="/error">
+          <Error error="That's not a very fungi!"/>
+        </Route>
+        {this.state.error ? <Redirect to='/error'/> :
+        <Route exact path="/">
+          <MovieContainer movies={this.state.selectedMovie} />
+          <FooterForm filterMovies={this.filterMovies}/>
+        </Route>}
+        <Route>
+          <Redirect to="/error"/>
+        </Route>
+      </Switch>
+    </main>
     )
   }
 }
