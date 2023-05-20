@@ -22,6 +22,10 @@ wins.) We stayed very organized and focused thanks to the norms and the Github P
 
 challenges.) React can has a steep learning curve, especially for us as beginners. The challenge lies in understanding the fundamental concepts and best practices of React and applying them in the project.Integrating with external APIs to fetch data was challenging, especially when dealing with authentication, error handling, and handling large datasets. As the application grew in complexity, managing the state and ensuring it is consistentcy across different components can became a challenge once we incorporated React Route. Throughout the development process, we encountered some bugs, errors, and unexpected behavior. Debugging and troubleshooting these issues was time-consuming and required patience and persistence, but in the end we were suffice with our outcomes.
 
+## Project GIF
+
+![7mhp5j](https://github.com/tdmburr/rancid-tomatillos/assets/76410246/412aba87-4df6-4c56-8c49-61ea399bf707)
+
 
 
 
