@@ -4,6 +4,7 @@ import MovieContainer from '../MovieContainer/MovieContainer'
 import MovieInfo from '../MovieInfo/MovieInfo'
 import FooterForm from '../FooterForm/FooterForm'
 import Header from '../Header/Header'
+import Error from '../Error/Error'
 import acquireInfo from '../../apiCalls'
 import './App.css';
 
@@ -22,7 +23,7 @@ class App extends Component {
     .then(data =>{
       this.setState({allMovies: data.movies, selectedMovie: data.movies})
     })
-    .catch(() => this.setState({error: 'That\'s not a very fungi!'}))
+    .catch(() => this.setState({error: "That's not a very fungi!"}))
   }
 
   filterMovies = (display) => {
@@ -39,6 +40,9 @@ class App extends Component {
           <Route path="/movies/:movieId" render={({ match }) => {
             return <MovieInfo selectedMovieId={match.params.movieId} />
           }} />
+          <Route exact path="/Error">
+            <Error error= "That's not a very fungi!"/>
+          </Route>
           <Route exact path="/">
             <MovieContainer movies={this.state.selectedMovie} />
             <FooterForm filterMovies={this.filterMovies}/>

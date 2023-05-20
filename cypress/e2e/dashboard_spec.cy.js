@@ -1,7 +1,7 @@
 import multipleStub from "../fixtures/multipleStub"
 import singleStub from "../fixtures/singleStub"
 
-describe('User movie dashboard with user flows and error handling', () => {
+describe('User movie dashboard with user flows', () => {
   let testVisit = () => cy.visit('http://localhost:3000')
   
   beforeEach(()=> {
@@ -46,3 +46,25 @@ describe('User movie dashboard with user flows and error handling', () => {
       .should('have.value', '')
   })
 })
+
+describe('User movie dashboard with error handling', () => {
+  let testVisit = () => cy.visit('http://localhost:3000')
+  
+  beforeEach(()=> {
+    cy.intercept({method: 'GET', url:'https://rancid-tomatillos.herokuapp.com/api/v2/movies'}, fungi)
+    testVisit()
+
+  })
+
+  it('As a user i should see an error response displayed', () => {
+    cy.get('.error-message')
+    .should('exist')
+    .should('be.visible')
+    .contains()
+  })
+
+})
+
+
+ 
+
