@@ -29,10 +29,6 @@ challenges.) React can has a steep learning curve, especially for us as beginner
 
 This project is a web application built using React framework. The application is designed to provide users with a platform to browse and explore a collection of movies. It allows users to view detailed information about each movie, such as the title, release date, overview, genre, budget, revenue, duration, tagline, and rating.When User enters a title keyword in the text input the movie titles will be filtered based on that title keyword.
 
-2.The movie titles should be updated in real-time as I type or modify the input.
-
-3.The filtering should be case-insensitive, meaning it should match movie titles regardless of their letter casing.
-
 ## Technologies 
 1. React: The application is built using React, a popular JavaScript library for building user interfaces. React provides a component-based structure that allows for efficient development and maintenance of complex applications.
 
