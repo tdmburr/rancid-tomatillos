@@ -1,7 +1,7 @@
 # README_Putrid_Portabellos
 
 ## Description
-Description: This application, called "Putrid Portabellos," is a movie information website that allows users to explore and discover various movies. Users can view a collection of movies, filter them by genre, and click on individual movies to see detailed information about them. The app aims to provide an engaging and user-friendly experience for movie enthusiasts.
+Description: This application, called "Putrid Portabellos," is a movie information website that allows users to explore and discover various movies. Users can view a collection of movies, filter them by title, and click on individual movies to see detailed information about them. The app aims to provide an engaging and user-friendly experience for movie enthusiasts.
 
 ## Learning Goals:
 Understand React and gain a solid understanding of the React library and its core concepts, such as components, state, props, and lifecycle methods. We alsohad to learn how to build reusable UI components and compose them.
@@ -20,7 +20,7 @@ Learning how to build and deploy the React application to a hosting platform or 
 
 wins.) We stayed very organized and focused thanks to the norms and the Github Project board that we had set up at on day one. We both had different strengths that we brought to the table and it made the group dynamic more productive in our asychronus work sessions. This project involved both frontend and backend aspects. We encountered various challenges and problems to solve which resulted in success after research and testing. Successfully overcoming these challenges boosted our problem-solving skills togethor and maintained our momentum in the project with the ability to solve technical issues aynchronously and collaboratively . Working as a group on this project gave us the chance to enhance our collaboration and communication skills, working together, sharing ideas, and coordinating efforts  helped us understand the dynamics of teamwork and how smooth a project can be with these aspects in place.
 
-challenges.) React can has a steep learning curve, especially for us as beginners. The challenge lies in understanding the fundamental concepts and best practices of React and applying them in the project.Integrating with external APIs to fetch data was challenging, especially when dealing with authentication, error handling, and handling large datasets. As the application grew in complexity, managing the state and ensuring it is consistentcy across different components can became a challenge once we incorporated React Route. Throughout the development process, we encountered some bugs, errors, and unexpected behavior. Debugging and troubleshooting these issues was time-consuming and required patience and persistence, but in the end we were suffice with our outcomes.
+challenges.) React can have a steep learning curve, especially for us as beginners. The challenge lies in understanding the fundamental concepts and best practices of React and applying them in the project.Integrating with external APIs to fetch data was challenging, especially when dealing with authentication, error handling, and handling large datasets. As the application grew in complexity, managing the state and ensuring it is consistentcy across different components can became a challenge once we incorporated React Route. Throughout the development process, we encountered some bugs, errors, and unexpected behavior. Debugging and troubleshooting these issues was time-consuming and required patience and persistence, but in the end we were suffice with our outcomes.
 
 ## Project GIF
 
@@ -48,7 +48,7 @@ This project is a web application built using React framework. The application i
 
 7. GitHub: GitHub is a web-based platform for hosting and sharing code repositories. It allows for easy collaboration, version control, and deployment of the application.
 
-8. Heroku: The application is deployed on Heroku, a cloud platform that enables easy hosting and scaling of web applications.
+8. Heroku: The API is deployed on Heroku, a cloud platform that enables easy hosting and scaling of web applications.
 
 ## Installation / Usage
 
