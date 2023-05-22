@@ -4,7 +4,7 @@
 Description: This application, called "Putrid Portabellos," is a movie information website that allows users to explore and discover various movies. Users can view a collection of movies, filter them by title, and click on individual movies to see detailed information about them. The app aims to provide an engaging and user-friendly experience for movie enthusiasts.
 
 ## Learning Goals:
-Understand React and gain a solid understanding of the React library and its core concepts, such as components, state, props, and lifecycle methods. We alsohad to learn how to build reusable UI components and compose them.
+Understand React and gain a solid understanding of the React library and its core concepts, such as components, state, props, and lifecycle methods. We also had to learn how to build reusable UI components and compose them.
 
 Practice React Router: Learn how to use React Router to handle routing within a React application. Understand how to define routes, handle our App navigation, and pass parameters to different components based on URL route.
 
